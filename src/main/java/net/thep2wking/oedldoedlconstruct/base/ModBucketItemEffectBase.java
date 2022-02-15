@@ -34,6 +34,18 @@ public class ModBucketItemEffectBase extends ModBucketItemBase
 	public Effect effect;
 	public boolean isDebuff;
 	
+	/**
+	 * @author TheP2WKing
+	 * @param supplier			{@link Supplier}
+	 * @param rarity			{@link Rarity}
+	 * @param hasEffect			boolean
+	 * @param fireImmunity		boolean
+	 * @param effect			{@link Effects}
+	 * @param isDebuff			boolean
+	 * @param lines 			{@link TipLines}
+	 * @param hasAnnotation  	boolean
+	 * @param properties		{@link Properties}
+	 */
 	public ModBucketItemEffectBase(Supplier<? extends Fluid> supplier, Rarity rarity, boolean hasEffect, boolean fireImmunity, Effect effect, boolean isDebuff, 
 	TipLines lines, boolean hasAnnotation, Properties properties) 
 	{
