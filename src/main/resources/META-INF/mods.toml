@@ -1,0 +1,61 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+[[mods]]
+modId="oedldoedlconstruct"
+version="1.16.5-3.0.0"
+displayName="Oedldoedl Series: Construct"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/oedldoedl-construct"
+logoFile="oedldoedlconstruct.png"
+authors="TheP2WKing"
+description='''
+[Oedldoedl Construct Project]
+
+Provides:
+    - Tooltips
+    - Information
+    - Various Fluids For Modpacks
+    - Various Tinker Materials And Modifiers
+    - Basic Build-In Recipes
+    - Tinkers Construct Integration
+    - TOP integration
+    - JEI integration
+    - High Configurability
+    - Easy Usability For Modpack Authors
+'''
+[[dependencies.oedldoedlconstruct]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlconstruct]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlconstruct]]
+    modId="oedldoedlcore"
+    mandatory=true
+    versionRange="[1.16.5-3.5.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.oedldoedlconstruct]]
+    modId="oedldoedlresources"
+    mandatory=true
+    versionRange="[1.16.5-3.4.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.oedldoedlconstruct]]
+    modId="theoneprobe"
+    mandatory=false
+    versionRange="[1.16-3.1.4,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.oedldoedlconstruct]]
+    modId="tconstruct"
+    mandatory=true
+    versionRange="[3.3.3,)"
+    ordering="AFTER"
+    side="BOTH"
