@@ -1,9 +1,12 @@
-buildscript {
-    repositories {
+buildscript 
+{
+    repositories 
+    {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
-    dependencies {
+    dependencies
+    {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
@@ -11,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-3.0.0'
+version = '1.16.5-3.1.0'
 group = 'net.thep2wking.oedldoedconstruct'
 archivesBaseName = 'oedldoedconstruct'
 
@@ -19,7 +22,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
-repositories {
+repositories 
+{
     maven { url 'https://dvs1.progwml6.com/files/maven/' }
     maven { url "https://maven.tterrag.com" }
     maven { url "https://maven.theillusivec4.top/" }
@@ -27,42 +31,53 @@ repositories {
     flatDir { dir 'libs' }
 }
 
-minecraft {
+minecraft 
+{
     mappings channel: 'snapshot', version: '20210309-1.16.5'
-    runs {
-        client {
+    runs 
+    {
+        client 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            mods {
-                oedldoedconstruct {
+            mods 
+            {
+                oedldoedconstruct 
+                {
                     source sourceSets.main
                 }
             }
         }
 
-        server {
+        server 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            mods {
-                oedldoedconstruct {
+            mods 
+            {
+                oedldoedconstruct 
+                {
                     source sourceSets.main
                 }
             }
         }
 
-        data {
+        data 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
             args '--mod', 'oedldoedconstruct', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
-            mods {
-                oedldoedconstruct {
+            mods 
+            {
+                oedldoedconstruct 
+                {
                     source sourceSets.main
                 }
             }
@@ -72,40 +87,49 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-repositories {
-    maven {
+repositories 
+{
+    maven 
+    {
         url "https://www.cursemaven.com"
-        content {
+        content 
+        {
             includeGroup "curse.maven"
         }
     }
 }
 
-dependencies {
+dependencies 
+{
+    //forge
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
 
-    compileOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145:api')
+    //mod dev utils
     runtimeOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145')
-    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
-    compileOnly fg.deobf("curse.maven:mantle-74924:3631982")
-    compileOnly fg.deobf("curse.maven:tinkers-construct-74072:3631989")
-
-    compileOnly fg.deobf("curse.maven:oedldoedl-core-265917:3647468")
-    compileOnly fg.deobf("curse.maven:oedldoedl-resources-513315:3649264")
-
     runtimeOnly fg.deobf("curse.maven:jei-integration-265917:3202331")
     runtimeOnly fg.deobf("curse.maven:configured-457570:3546348")
     runtimeOnly fg.deobf("curse.maven:worldedit-225608:3283693")
+
+    //integration
+    compileOnly fg.deobf("curse.maven:oedldoedl-core-265917:3760666")
+    compileOnly fg.deobf("curse.maven:oedldoedl-resources-513315:3760676")
+    compileOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145:api')
+    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
+    compileOnly fg.deobf("curse.maven:mantle-74924:3631982")
+    compileOnly fg.deobf("curse.maven:tinkers-construct-74072:3695126")
 }
 
-jar {
-    manifest {
-        attributes([
+jar 
+{
+    manifest 
+    {
+        attributes
+        ([
             "Specification-Title": "oedldoedconstruct",
             "Specification-Vendor": "oedldoedconstructsareus",
-            "Specification-Version": "1.16.5-3.0.0",
+            "Specification-Version": "1.16.5-3.1.0",
             "Implementation-Title": "oedldoedconstruct",
-            "Implementation-Version": "1.16.5-3.0.0",
+            "Implementation-Version": "1.16.5-3.1.0",
             "Implementation-Vendor" :"oedldoedconstructsareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
@@ -114,14 +138,19 @@ jar {
 
 jar.finalizedBy('reobfJar') 
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
+publishing 
+{
+    publications 
+    {
+        mavenJava(MavenPublication) 
+        {
             artifact jar
         }
     }
-    repositories {
-        maven {
+    repositories 
+    {
+        maven 
+        {
             url "file:///${project.projectDir}/mcmodsrepo"
         }
     }
