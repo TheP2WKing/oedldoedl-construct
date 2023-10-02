@@ -1,8 +1,13 @@
-package net.thep2wking.oedldoedlgear;
+package net.thep2wking.oedldoedlconstruct;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,44 +19,63 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.thep2wking.oedldoedlconstruct.registry.ModRecipes;
+import net.thep2wking.oedldoedlconstruct.util.proxy.CommonProxy;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
-import net.thep2wking.oedldoedlgear.util.proxy.CommonProxy;
 
-@Mod(modid = OedldoedlGear.MODID, name = OedldoedlGear.NAME, version = OedldoedlGear.VERSION, dependencies = OedldoedlGear.DEPENDENCIES)
-public class OedldoedlGear {
-    public static final String MODID = "oedldoedlgear";
+@Mod(modid = OedldoedlConstruct.MODID, name = OedldoedlConstruct.NAME, version = OedldoedlConstruct.VERSION, dependencies = OedldoedlConstruct.DEPENDENCIES)
+public class OedldoedlConstruct {
+    public static final String MODID = "oedldoedlconstruct";
     public static final String PREFIX = MODID + ":";
     public static final String MC_VERSION = "1.12.2";
-    public static final String NAME = "Oedldoedl Gear";
+    public static final String NAME = "Oedldoedl Construct";
     public static final String VERSION = MC_VERSION + "-" + "3.0.0";
     public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);";
-    public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlgear.util.proxy.ClientProxy";
-    public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlgear.util.proxy.ServerProxy";
+    public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ClientProxy";
+    public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ServerProxy";
 
     @Instance
-    public static OedldoedlGear INSTANCE;
+    public static OedldoedlConstruct INSTANCE;
 
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
     public static CommonProxy PROXY;
 
-	public static final CreativeTabs TAB = new CreativeTabs(OedldoedlGear.MODID + ".name") {
-		@Override
-		@SideOnly(Side.CLIENT)
-		public ItemStack getTabIconItem() {
-			return new ItemStack(ModItems.GEAR_ICON, 1, 0);
-		}
+    static {
+        FluidRegistry.enableUniversalBucket();
+    }
 
-		@Override
-		@SideOnly(Side.CLIENT)
-		public ResourceLocation getBackgroundImage() {
-			return ModReferences.CREATIVE_TAB_DARK;
-		}
-	};
-    
+    public static final CreativeTabs TAB = new CreativeTabs(OedldoedlConstruct.MODID + ".name") {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem() {
+            return new ItemStack(ModItems.CONSTRUCT_ICON, 1, 0);
+        }
+
+        @Override
+        @SideOnly(Side.CLIENT)
+        public ResourceLocation getBackgroundImage() {
+            return ModReferences.CREATIVE_TAB_DARK;
+        }
+
+        @Override
+        @SuppressWarnings("all")
+        public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
+            super.displayAllRelevantItems(itemList);
+            for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
+                if (bucketFluid.getBlock() != null && bucketFluid.getBlock().getRegistryName().getResourceDomain()
+                        .equals(OedldoedlConstruct.MODID)) {
+                    ItemStack itemstack = UniversalBucket
+                            .getFilledBucket(ForgeModContainer.getInstance().universalBucket, bucketFluid);
+                    itemList.add(itemstack);
+                }
+            }
+        }
+    };
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
@@ -61,8 +85,8 @@ public class OedldoedlGear {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         ModLogger.initLogger(MODID);
-        // ModRecipes.registerOreDict();
-        // ModRecipes.registerRecipes();
+        ModRecipes.registerOreDict();
+        ModRecipes.registerRecipes();
         PROXY.init(event);
     }
 

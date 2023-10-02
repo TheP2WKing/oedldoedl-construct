@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlgear.registry;
+package net.thep2wking.oedldoedlconstruct.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlgear.util.proxy;
+package net.thep2wking.oedldoedlconstruct.util.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
