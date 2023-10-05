@@ -1,0 +1,37 @@
+{
+  "modifier": "hater",
+  "text": [
+    {
+      "text": "The ultimate weapon against friends and mobs you realy must hate."
+    },
+    {
+      "text": "Now they will never speak any word with you."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "And if they like you, they will stat hating you from now on!"
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Annoys mobs and players even more",
+    "Levitating (sneaking)",
+    "Lots of negativ effects",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}

@@ -4,10 +4,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -19,11 +15,16 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersBookTransformer;
+import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersRecipes;
+import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersTools;
 import net.thep2wking.oedldoedlconstruct.registry.ModRecipes;
+import net.thep2wking.oedldoedlconstruct.registry.ModRegistry;
 import net.thep2wking.oedldoedlconstruct.util.proxy.CommonProxy;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
+import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 
@@ -34,7 +35,7 @@ public class OedldoedlConstruct {
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Construct";
     public static final String VERSION = MC_VERSION + "-" + "3.0.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);required-after:tconstruct@[1.12.2-2.13.0.180,);";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ServerProxy";
 
@@ -43,10 +44,6 @@ public class OedldoedlConstruct {
 
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
     public static CommonProxy PROXY;
-
-    static {
-        FluidRegistry.enableUniversalBucket();
-    }
 
     public static final CreativeTabs TAB = new CreativeTabs(OedldoedlConstruct.MODID + ".name") {
         @Override
@@ -62,31 +59,28 @@ public class OedldoedlConstruct {
         }
 
         @Override
-        @SuppressWarnings("all")
         public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
             super.displayAllRelevantItems(itemList);
-            for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
-                if (bucketFluid.getBlock() != null && bucketFluid.getBlock().getRegistryName().getResourceDomain()
-                        .equals(OedldoedlConstruct.MODID)) {
-                    ItemStack itemstack = UniversalBucket
-                            .getFilledBucket(ForgeModContainer.getInstance().universalBucket, bucketFluid);
-                    itemList.add(itemstack);
-                }
-            }
+            ModFluidUtil.displayForgeBuckets(itemList, OedldoedlConstruct.MODID);
         }
     };
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
+        ModRegistry.registerFluids(event);
+        ModTinkersTools.preInit();
         PROXY.preInit(event);
     }
-
+    
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         ModLogger.initLogger(MODID);
         ModRecipes.registerOreDict();
         ModRecipes.registerRecipes();
+        ModTinkersTools.init();
+        ModTinkersBookTransformer.integrate();
+        ModTinkersRecipes.registerRecipes();
         PROXY.init(event);
     }
 

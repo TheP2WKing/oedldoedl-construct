@@ -3,3 +3,106 @@ itemGroup.oedldoedlconstruct.name=§dOedldoedl Construct
 
 # icons
 item.oedldoedlcore.construct_icon.annotation3=Version: §e1.12.2-3.0.0
+
+# items
+item.oedldoedlconstruct.infinity_symbol.name=Infinity Symbol
+item.oedldoedlconstruct.infinity_symbol.tip1=Limitless possibilities.
+item.oedldoedlconstruct.furious_cocktail.name=Furious Cocktail
+item.oedldoedlconstruct.furious_cocktail.tip1=It is never too late to run...
+item.oedldoedlconstruct.remote_breaker.name=Remote Breaker
+item.oedldoedlconstruct.remote_breaker.tip1=It will break your mind.
+item.oedldoedlconstruct.sadistic_soul.name=Sadistic Soul
+item.oedldoedlconstruct.sadistic_soul.tip1=Nagatoros soul in your hands
+
+# fluids
+tile.oedldoedlconstruct.base.name=Molten Base
+fluid.oedldoedlconstruct.base=Molten Base
+tile.oedldoedlconstruct.oedldoedl.name=Molten Oedldoedl
+fluid.oedldoedlconstruct.oedldoedl=Molten Oedldoedl
+tile.oedldoedlconstruct.bedrockium.name=Molten Bedrockium
+fluid.oedldoedlconstruct.bedrockium=Molten Bedrockium
+tile.oedldoedlconstruct.cloudium.name=Molten Cloudium
+fluid.oedldoedlconstruct.cloudium=Molten Cloudium
+tile.oedldoedlconstruct.elevatium.name=Molten Elevatium
+fluid.oedldoedlconstruct.elevatium=Molten Elevatium
+tile.oedldoedlconstruct.sadistium.name=Molten Sadistium
+fluid.oedldoedlconstruct.sadistium=Molten Sadistium
+tile.oedldoedlconstruct.drunkium.name=Molten Drunkium
+fluid.oedldoedlconstruct.drunkium=Molten Drunkium
+tile.oedldoedlconstruct.money.name=Molten Money
+fluid.oedldoedlconstruct.money=Molten Money
+tile.oedldoedlconstruct.chaos.name=Molten Chaos
+fluid.oedldoedlconstruct.chaos=Molten Chaos
+
+tile.oedldoedlconstruct.gremorium.name=Molten Gremorium
+fluid.oedldoedlconstruct.gremorium=Molten Gremorium
+tile.oedldoedlconstruct.himejimarium.name=Molten Himejimarium
+fluid.oedldoedlconstruct.himejimarium=Molten Himejimarium
+tile.oedldoedlconstruct.toujourium.name=Molten Toujourium
+fluid.oedldoedlconstruct.toujourium=Molten Toujourium
+tile.oedldoedlconstruct.argentorium.name=Molten Argentorium
+fluid.oedldoedlconstruct.argentorium=Molten Argentorium
+tile.oedldoedlconstruct.quartarium.name=Molten Quartarium
+fluid.oedldoedlconstruct.quartarium=Molten Quartarium
+tile.oedldoedlconstruct.nagatorium.name=Molten Nagatorium
+fluid.oedldoedlconstruct.nagatorium=Molten Nagatorium
+tile.oedldoedlconstruct.sakurajimarium.name=Molten Sakurajimarium
+fluid.oedldoedlconstruct.sakurajimarium=Molten Sakurajimarium
+tile.oedldoedlconstruct.kitagawarium.name=Molten Kitagawarium
+fluid.oedldoedlconstruct.kitagawarium=Molten Kitagawarium
+
+# material
+material.oedldoedlconstruct.base.name=Base
+material.oedldoedlconstruct.bedrockium.name=Bedrockium
+material.oedldoedlconstruct.cloudium.name=Cloudium
+material.oedldoedlconstruct.elevatium.name=Elevatium
+material.oedldoedlconstruct.sadistium.name=Sadistium
+material.oedldoedlconstruct.drunkium.name=Drunkium
+material.oedldoedlconstruct.money.name=Money
+material.oedldoedlconstruct.chaos.name=Chaos
+
+material.oedldoedlconstruct.gremorium.name=Gremorium
+material.oedldoedlconstruct.himejimarium.name=Himejimarium
+material.oedldoedlconstruct.toujourium.name=Toujourium
+material.oedldoedlconstruct.argentorium.name=Argentorium
+material.oedldoedlconstruct.quartarium.name=Quartarium
+material.oedldoedlconstruct.nagatorium.name=Nagatorium
+material.oedldoedlconstruct.sakurajimarium.name=Sakurajimarium
+material.oedldoedlconstruct.kitagawarium.name=Kitagawarium
+
+# modifier
+modifier.oedldoedlconstruct.gremoriusly.name=Gremoriusly
+modifier.oedldoedlconstruct.gremoriusly.desc=§oDxD-ed!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.himejimariusly.name=Himejimariusly
+modifier.oedldoedlconstruct.himejimariusly.desc=§oDxD-ed!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.toujouriusly.name=Toujouriusly
+modifier.oedldoedlconstruct.toujouriusly.desc=§oDxD-ed!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.argentoriusly.name=Argentoriusly
+modifier.oedldoedlconstruct.argentoriusly.desc=§oDxD-ed!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.quartariusly.name=Quartariusly
+modifier.oedldoedlconstruct.quartariusly.desc=§oDxD-ed!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.nagatoriusly.name=Nagatoriusly
+modifier.oedldoedlconstruct.nagatoriusly.desc=§oDont toy with me!§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.sakurajimariusly.name=Sakurajimariusly
+modifier.oedldoedlconstruct.sakurajimariusly.desc=§oQuantum physics...§r\n§fGet lovely materials by doing your daily routine.
+modifier.oedldoedlconstruct.kitagawariusly.name=Kitagawariusly
+modifier.oedldoedlconstruct.kitagawariusly.desc=§oGojo-kuuuuuuun...§r\n§fGet lovely materials by doing your daily routine.
+
+modifier.oedldoedlconstruct.hater.name=Hater
+modifier.oedldoedlconstruct.hater.desc=§oOh sh*t, oh sh*t...§r\n§fMobs and players will hate you even more!
+modifier.oedldoedlconstruct.sadistic.name=Sadistic
+modifier.oedldoedlconstruct.sadistic.desc=§oSurprise, surprise...§r\n§fMobs and players will hate you!
+modifier.oedldoedlconstruct.levitating.name=Levitating
+modifier.oedldoedlconstruct.levitating.desc=§oHigh Hopes but where is Panic At The Disco?§r\n§fCU again...
+
+modifier.oedldoedlconstruct.timeshifter.name=Timeshifter
+modifier.oedldoedlconstruct.timeshifter.desc=§o3 a.m. again?!§r\n§fI do not wanna go to bed.
+modifier.oedldoedlconstruct.sunburnt.name=Sunburnt
+modifier.oedldoedlconstruct.sunburnt.desc=§oTanned§r\n§fMarin is even hotter!
+modifier.oedldoedlconstruct.rich.name=Rich
+modifier.oedldoedlconstruct.rich.desc=§oKa-Ching§r\n§fI AM RICH!!!
+
+modifier.oedldoedlconstruct.world_breaker.name=World Breaker
+modifier.oedldoedlconstruct.world_breaker.desc=§oWho thought that was a good idea...?§r\n§fBreak your friends mind like this tool breaks the unbreakable.
+modifier.oedldoedlconstruct.infinity.name=Infinity
+modifier.oedldoedlconstruct.infinity.desc=§oInternal damage error§r\n§fOne hit wonder?

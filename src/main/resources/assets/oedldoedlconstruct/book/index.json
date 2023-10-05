@@ -1,0 +1,11 @@
+[
+    {
+        "name": "oedldoedlconstructmodifiers",
+        "data": "sections/modifiers.json",
+        "icon": {
+            "item": {
+                "id": "minecraft:nether_star"
+            }
+        }
+    }
+]

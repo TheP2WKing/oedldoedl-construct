@@ -1,0 +1,34 @@
+{
+  "modifier": "infinity",
+  "text": [
+    {
+      "text": "Definetly not inspired by Avaritia."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Additional damage is necessary is a universe where creeper and squids exist."
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Deals (kind of) unlimeted damage",
+    "Stolen by Avaritia",
+    "Way too OP",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}

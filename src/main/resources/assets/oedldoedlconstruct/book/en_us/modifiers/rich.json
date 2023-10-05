@@ -1,0 +1,33 @@
+{
+  "modifier": "rich",
+  "text": [
+    {
+      "text": "Money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money, money."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Did I say money?"
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Ka-Ching",
+    "Cash",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}

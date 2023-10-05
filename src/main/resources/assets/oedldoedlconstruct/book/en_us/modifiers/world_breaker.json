@@ -1,0 +1,34 @@
+{
+  "modifier": "world_breaker",
+  "text": [
+    {
+      "text": "Definetly not inspired by Avaritia."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Break the unbreakable by simply mining a block. Yes, its that easy. And you get the block if nobody changed the config..."
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Intended game feature",
+    "Break blocks",
+    "Who is responsible for these texts",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}

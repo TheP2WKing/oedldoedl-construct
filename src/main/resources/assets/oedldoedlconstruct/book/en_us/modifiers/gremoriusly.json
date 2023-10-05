@@ -1,0 +1,33 @@
+{
+  "modifier": "gremoriusly",
+  "text": [
+    {
+      "text": "All what to do is mining the damn block, player. Alternatively, try killing a few mobs."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "You will be surprised at what awaits you if you cant read the description."
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Shards drop from blocks and mobs",
+    "Highschool DxD",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}

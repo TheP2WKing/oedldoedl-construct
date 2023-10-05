@@ -1,0 +1,54 @@
+[
+    {
+        "type": "modifier",
+        "data": "modifiers/sadistic.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/hater.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/rich.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/world_breaker.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/infinity.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/gremoriusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/himejimariusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/toujouriusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/argentoriusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/quartariusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/nagatoriusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/sakurajimariusly.json"
+    },
+    {
+        "type": "modifier",
+        "data": "modifiers/kitagawariusly.json"
+    }
+]

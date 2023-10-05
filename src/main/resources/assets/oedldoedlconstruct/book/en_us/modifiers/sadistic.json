@@ -1,0 +1,34 @@
+{
+  "modifier": "sadistic",
+  "text": [
+    {
+      "text": "The ultimate weapon against friends and mobs you dont realy like."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "I love sadism..."
+    },
+    {
+      "text": "\n"
+    }
+  ],
+  "effects": [
+    "Annoys mobs and players",
+    "Teleport downwards (sneaking)",
+    "Negativ effects",
+    "Single level"
+  ],
+  "demoTool": [
+    "tconstruct:broadsword",
+    "tconstruct:cleaver",
+    "tconstruct:hammer",
+    "tconstruct:longsword",
+    "tconstruct:shortbow",
+    "tconstruct:frypan",
+    "tconstruct:crossbow",
+    "tconstruct:scythe",
+    "tconstruct:shuriken"
+  ]
+}
