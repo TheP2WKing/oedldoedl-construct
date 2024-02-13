@@ -8,7 +8,7 @@ import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.init.ModBlocks;
 import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 
-public class ModFluidRendering {
+public class ModRenderer {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
     public static void registerFluidModels(ModelRegistryEvent event) {

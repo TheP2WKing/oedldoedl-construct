@@ -14,7 +14,7 @@ import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 import net.thep2wking.oedldoedlconstruct.init.ModBlocks;
 import net.thep2wking.oedldoedlconstruct.init.ModFluids;
 import net.thep2wking.oedldoedlconstruct.init.ModItems;
-import net.thep2wking.oedldoedlconstruct.util.ModFluidRendering;
+import net.thep2wking.oedldoedlconstruct.util.ModRenderer;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 
@@ -23,7 +23,7 @@ public class ModRegistry {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		ModRegistryHelper.registerModels(event, OedldoedlConstruct.MODID);
-		ModFluidRendering.registerFluidModels(event);
+		ModRenderer.registerFluidModels(event);
 	}
 
 	@SubscribeEvent
