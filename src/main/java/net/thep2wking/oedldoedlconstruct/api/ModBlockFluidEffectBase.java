@@ -20,10 +20,22 @@ import net.thep2wking.oedldoedlcore.integration.top.ITOPInfoProvider;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 import net.thep2wking.oedldoedlcore.util.ModTopTooltips;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModBlockFluidEffectBase extends ModBlockFluidBase implements ITOPInfoProvider {
 	public final Potion effect;
 	public final boolean isDebuff;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid    String
+	 * @param name     String
+	 * @param material {@link Material}
+	 * @param mapColor {@link MapColor}
+	 * @param effect   {@link Potion}
+	 * @param isDebuff boolean
+	 */
 	public ModBlockFluidEffectBase(String modid, String name, Fluid fluid, Material material, MapColor mapColor,
 			Potion effect, boolean isDebuff) {
 		super(modid, name, fluid, material, mapColor);

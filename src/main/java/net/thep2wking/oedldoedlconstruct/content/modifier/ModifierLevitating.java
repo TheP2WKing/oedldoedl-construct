@@ -4,36 +4,22 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
-import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
-import slimeknights.tconstruct.library.modifiers.ModifierAspect;
-import slimeknights.tconstruct.library.modifiers.ModifierTrait;
+import net.thep2wking.oedldoedlconstruct.api.ModSingleModifierBase;
+import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 
-public class ModifierLevitating extends ModifierTrait {
-	public ModifierLevitating() {
-		super("levitating", 0xa673a6);
-		this.addAspects(new ModifierAspect.SingleAspect(this));
-	}
-
-	@Override
-	public String getLocalizedName() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".name")
-				.getFormattedText();
-	}
-
-	@Override
-	public String getLocalizedDesc() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".desc")
-				.getFormattedText();
+public class ModifierLevitating extends ModSingleModifierBase {
+	public ModifierLevitating(String identifier, int color) {
+		super(identifier, color);
 	}
 
 	@Override
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt,
 			boolean wasCritical) {
-		World world = target.getEntityWorld();
-		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()) {
-			target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 60, 50, false, false));
+		World world = player.getEntityWorld();
+		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()
+				&& ConstructConfig.CONTENT.MODIFIER.LEVITATING_MODIFIER_LEVITATION_EFFECT) {
+			target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 60, 24, false, false));
 		}
 	}
 }

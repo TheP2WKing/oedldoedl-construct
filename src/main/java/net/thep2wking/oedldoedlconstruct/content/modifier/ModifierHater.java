@@ -4,19 +4,15 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
-import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
+import net.thep2wking.oedldoedlconstruct.api.ModSingleModifierBase;
+import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 import net.thep2wking.oedldoedlconstruct.init.ModModifier;
 import slimeknights.tconstruct.library.modifiers.IToolMod;
-import slimeknights.tconstruct.library.modifiers.ModifierAspect;
-import slimeknights.tconstruct.library.modifiers.ModifierTrait;
 
-public class ModifierHater extends ModifierTrait {
-	public ModifierHater() {
-		super("hater", 0x380c70);
-		this.addAspects(new ModifierAspect.SingleAspect(this));
-		this.addItem("furiousCocktail");
+public class ModifierHater extends ModSingleModifierBase {
+	public ModifierHater(String identifier, int color, String modifierItemOreDict) {
+		super(identifier, color, modifierItemOreDict);
 	}
 
 	@Override
@@ -26,34 +22,34 @@ public class ModifierHater extends ModifierTrait {
 	}
 
 	@Override
-	public String getLocalizedName() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".name")
-				.getFormattedText();
-	}
-
-	@Override
-	public String getLocalizedDesc() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".desc")
-				.getFormattedText();
-	}
-
-	@Override
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt,
 			boolean wasCritical) {
-		World world = target.getEntityWorld();
-		if (target.isEntityAlive() && !world.isRemote) {
-			target.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 100, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 60, 1, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 60, 3, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 60, 4, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 60, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.POISON, 60, 4, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.WITHER, 60, 2, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 60, 2, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.UNLUCK, 60, 3, false, false));
-			if (player.isSneaking()) {
-				target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 100, 100, false, false));
-			}
+		World world = player.getEntityWorld();
+		if (target.isEntityAlive() && !world.isRemote
+				&& ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_EFFECTS) {
+			target.addPotionEffect(new PotionEffect(MobEffects.GLOWING,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 0, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 1, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.HUNGER,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 3, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 4, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 0, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.POISON,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 4, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.WITHER,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 2, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 2, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.UNLUCK,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 3, false, false));
+		}
+		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()
+				&& ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_LEVITATION_EFFECT) {
+			target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION,
+					ConstructConfig.CONTENT.MODIFIER.HATER_MODIFIER_POTION_DURATION, 99, false, false));
 		}
 	}
 }

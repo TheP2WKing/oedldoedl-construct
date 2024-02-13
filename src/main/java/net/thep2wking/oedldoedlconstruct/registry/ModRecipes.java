@@ -1,11 +1,13 @@
 package net.thep2wking.oedldoedlconstruct.registry;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.api.ModTinkersHelper;
 import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 import net.thep2wking.oedldoedlconstruct.init.ModFluids;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
+import net.thep2wking.oedldoedlcore.util.ModNBTUtil;
 import net.thep2wking.oedldoedlcore.util.ModRecipeHelper;
 import net.thep2wking.oedldoedlresources.init.ModBlocks;
 import net.thep2wking.oedldoedlresources.init.ModItems;
@@ -29,6 +31,23 @@ public class ModRecipes {
 	public static void registerRecipes() {
 		if (ConstructConfig.RECIPES.DEFAULT_RECIPES) {
 			ModLogger.registeredRecipesLogger(OedldoedlConstruct.MODID);
+
+			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "infinity_symbol",
+					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.INFINITY_SYMBOL, 1, 0), "ABA", "BCB",
+					"ABA", 'A', "oedldoedlStar", 'B', "ingotChaos", 'C', "catalystChaos");
+			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "furious_cocktail",
+					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.FURIOUS_COCKTAIL, 1, 0), "ABC", "DEF",
+					"GHI", 'A', "dustBlaze", 'B', new ItemStack(Items.DRAGON_BREATH, 1, 0), 'C', "magmaCream", 'D',
+					ModNBTUtil.addPotion("minecraft:long_slowness"), 'E', "listAllwater", 'F',
+					ModNBTUtil.addPotion("minecraft:long_weakness"), 'G', "cropNetherWart", 'H',
+					ModNBTUtil.addPotion("minecraft:strong_poison"), 'I', "ghastTear");
+			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "remote_breaker",
+					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.REMOTE_BREAKER, 1, 0), "ABA", "CDE",
+					"FFF", 'A', "dyeOrange", 'B', "torchRedstone", 'C', "dyeRed", 'D',
+					new ItemStack(Items.DIAMOND_PICKAXE, 1, 0), 'E', "dyeGreen", 'F', "obsidian");
+			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "sadistic_soul",
+					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.SADISTIC_SOUL, 1, 0), "ABA", "BCB",
+					"ABA", 'A', "ingotSadistium", 'B', "soulsand", 'C', new ItemStack(Items.SKULL, 1, 1));
 		}
 
 		if (ConstructConfig.RECIPES.MELTING_AND_CASTING_CONVERSION_RECIPES) {

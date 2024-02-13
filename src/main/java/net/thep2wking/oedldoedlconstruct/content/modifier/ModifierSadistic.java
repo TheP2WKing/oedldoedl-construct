@@ -4,19 +4,15 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
-import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
+import net.thep2wking.oedldoedlconstruct.api.ModSingleModifierBase;
+import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 import net.thep2wking.oedldoedlconstruct.init.ModModifier;
 import slimeknights.tconstruct.library.modifiers.IToolMod;
-import slimeknights.tconstruct.library.modifiers.ModifierAspect;
-import slimeknights.tconstruct.library.modifiers.ModifierTrait;
 
-public class ModifierSadistic extends ModifierTrait {
-	public ModifierSadistic(String identifier, int color) {
-		super(identifier, color);
-		this.addAspects(new ModifierAspect.SingleAspect(this));
-		this.addItem("sadisticSoul");
+public class ModifierSadistic extends ModSingleModifierBase {
+	public ModifierSadistic(String identifier, int color, String modifierItemOreDict) {
+		super(identifier, color, modifierItemOreDict);
 	}
 
 	@Override
@@ -26,28 +22,23 @@ public class ModifierSadistic extends ModifierTrait {
 	}
 
 	@Override
-	public String getLocalizedName() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".name")
-				.getFormattedText();
-	}
-
-	@Override
-	public String getLocalizedDesc() {
-		return new TextComponentTranslation("modifier." + OedldoedlConstruct.MODID + "." + this.identifier + ".desc")
-				.getFormattedText();
-	}
-
-	@Override
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt,
 			boolean wasCritical) {
-		World world = target.getEntityWorld();
-		if (target.isEntityAlive() && !world.isRemote) {
-			target.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 100, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 100, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 60, 3, false, false));
-			if (player.isSneaking()) {
-				target.setPosition(target.posX, target.posY - 3, target.posZ);
-			}
+		World world = player.getEntityWorld();
+		if (target.isEntityAlive() && !world.isRemote
+				&& ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_POTION_EFFECTS) {
+			target.addPotionEffect(new PotionEffect(MobEffects.GLOWING,
+					ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_POTION_DURATION, 0, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS,
+					ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_POTION_DURATION, 0, false, false));
+			target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE,
+					ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_POTION_DURATION, 3, false, false));
+		}
+		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()
+				&& ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_DOWN_TELEPORT) {
+			target.setPosition(target.posX,
+					target.posY - ConstructConfig.CONTENT.MODIFIER.SADISTIC_MODIFIER_BLOCKS_TELEPORTED_DOWN,
+					target.posZ);
 		}
 	}
 }
