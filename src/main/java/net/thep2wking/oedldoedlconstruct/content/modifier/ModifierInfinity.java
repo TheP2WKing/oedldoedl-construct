@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct.modifier;
+package net.thep2wking.oedldoedlconstruct.content.modifier;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;

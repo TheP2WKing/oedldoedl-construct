@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct.modifier;
+package net.thep2wking.oedldoedlconstruct.content.modifier;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -16,11 +16,11 @@ import net.thep2wking.oedldoedlresources.init.ModItems;
 import slimeknights.tconstruct.library.modifiers.ModifierAspect;
 import slimeknights.tconstruct.library.modifiers.ModifierTrait;
 
-public class ModifierToujouriusly extends ModifierTrait {
-	public ModifierToujouriusly() {
-		super("toujouriusly", 0xc0c0c0);
+public class ModifierGremoriusly extends ModifierTrait {
+	public ModifierGremoriusly() {
+		super("gremoriusly", 0x990000);
 		this.addAspects(new ModifierAspect.SingleAspect(this));
-		this.addItem("toujouriumStar");
+		this.addItem("gremoriumStar");
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class ModifierToujouriusly extends ModifierTrait {
 			World world = target.getEntityWorld();
 			if (target.isEntityAlive() && !world.isRemote && world.rand.nextFloat() < 0.1F) {
 				EntityItem item = new EntityItem(world, target.posX + 0.5, target.posY, target.posZ + 0.05,
-						new ItemStack(ModItems.TOUJOURIUM_SHARD, 1, 0));
+						new ItemStack(ModItems.GREMORIUM_SHARD, 1, 0));
 				world.spawnEntity(item);
 			}
 		}
@@ -53,7 +53,7 @@ public class ModifierToujouriusly extends ModifierTrait {
 			boolean wasEffective) {
 		if (wasEffective && !world.isRemote && random.nextFloat() < 0.02F) {
 			EntityItem item = new EntityItem(world, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5,
-					new ItemStack(ModItems.TOUJOURIUM_SHARD, 1, 0));
+					new ItemStack(ModItems.GREMORIUM_SHARD, 1, 0));
 			world.spawnEntity(item);
 		}
 	}
@@ -62,7 +62,7 @@ public class ModifierToujouriusly extends ModifierTrait {
 	public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected) {
 		if (entity.isEntityAlive() && isSelected && ConstructConfig.PROPERTIES.EFFECTS.TCONSTRUCT.TINKERS_TOOLS_EFFECTS
 				&& ConstructConfig.PROPERTIES.EFFECTS.EFFECTS_EBALED) {
-			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.SPEED, 19,
+			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.HASTE, 19,
 					ConstructConfig.PROPERTIES.EFFECTS.TCONSTRUCT.TINKERS_TOOLS_BASE_AMPLIFIER - 1, false, false));
 		}
 	}

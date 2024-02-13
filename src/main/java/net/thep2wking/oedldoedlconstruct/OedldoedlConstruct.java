@@ -15,9 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersBookTransformer;
-import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersRecipes;
-import net.thep2wking.oedldoedlconstruct.content.tconstruct.ModTinkersTools;
+import net.thep2wking.oedldoedlconstruct.init.ModTinkersTools;
 import net.thep2wking.oedldoedlconstruct.registry.ModRecipes;
 import net.thep2wking.oedldoedlconstruct.registry.ModRegistry;
 import net.thep2wking.oedldoedlconstruct.util.proxy.CommonProxy;
@@ -34,8 +32,8 @@ public class OedldoedlConstruct {
     public static final String PREFIX = MODID + ":";
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Construct";
-    public static final String VERSION = MC_VERSION + "-" + "3.0.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-3.0.0,);required-after:oedldoedlresources@[1.12.2-3.0.0,);required-after:tconstruct@[1.12.2-2.13.0.180,);";
+    public static final String VERSION = MC_VERSION + "-" + "4.0.0";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-4.0.0,);required-after:oedldoedlresources@[1.12.2-4.0.0,);required-after:mantle@[1.12-1.3.3.55,);required-after:tconstruct@[1.12.2-2.13.0.180,);";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ServerProxy";
 
@@ -59,6 +57,7 @@ public class OedldoedlConstruct {
         }
 
         @Override
+        @SideOnly(Side.CLIENT)
         public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
             super.displayAllRelevantItems(itemList);
             ModFluidUtil.displayForgeBuckets(itemList, OedldoedlConstruct.MODID);
@@ -79,11 +78,9 @@ public class OedldoedlConstruct {
         ModRecipes.registerOreDict();
         ModRecipes.registerRecipes();
         ModTinkersTools.init();
-        ModTinkersBookTransformer.integrate();
-        ModTinkersRecipes.registerRecipes();
         PROXY.init(event);
     }
-
+    
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         ModLogger.postInitLogger(MODID);

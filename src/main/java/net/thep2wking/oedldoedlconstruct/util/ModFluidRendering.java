@@ -1,17 +1,17 @@
 package net.thep2wking.oedldoedlconstruct.util;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.init.ModBlocks;
 import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 
-@Mod.EventBusSubscriber(Side.CLIENT)
 public class ModFluidRendering {
 	@SubscribeEvent
-    public static void registerModel(ModelRegistryEvent event) {
+	@SideOnly(Side.CLIENT)
+    public static void registerFluidModels(ModelRegistryEvent event) {
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "base", ModBlocks.MOLTEN_BASE);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "oedldoedl", ModBlocks.MOLTEN_OEDLDOEDL);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "bedrockium", ModBlocks.MOLTEN_BEDROCKIUM);

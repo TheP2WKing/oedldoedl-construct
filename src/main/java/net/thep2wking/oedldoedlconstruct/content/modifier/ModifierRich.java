@@ -1,19 +1,20 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct.modifier;
+package net.thep2wking.oedldoedlconstruct.content.modifier;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
+import net.thep2wking.oedldoedlresources.init.ModSounds;
 import slimeknights.tconstruct.library.modifiers.ModifierAspect;
 import slimeknights.tconstruct.library.modifiers.ModifierTrait;
 
-public class ModifierLevitating extends ModifierTrait {
-	public ModifierLevitating() {
-		super("levitating", 0xa673a6);
+public class ModifierRich extends ModifierTrait {
+	public ModifierRich() {
+		super("rich", 0xfdbf00);
 		this.addAspects(new ModifierAspect.SingleAspect(this));
+		this.addItem("ingotMoney");
 	}
 
 	@Override
@@ -32,8 +33,8 @@ public class ModifierLevitating extends ModifierTrait {
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt,
 			boolean wasCritical) {
 		World world = target.getEntityWorld();
-		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()) {
-			target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 60, 50, false, false));
+		if (target.isEntityAlive() && !world.isRemote) {
+			world.playSound(null, target.getPosition(), ModSounds.MONEY, SoundCategory.AMBIENT, 0.5f, 1.0f);
 		}
 	}
 }

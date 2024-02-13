@@ -19,11 +19,6 @@ import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.tools.TinkerTools;
 
 public class ModTinkersHelper {
-	public static final ItemStack CAST_NUGGET = new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 1);
-	public static final ItemStack CAST_INGOT = new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 0);
-	public static final ItemStack CAST_GEM = new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 2);
-	public static final ItemStack CAST_BLOCK = ItemStack.EMPTY;
-
 	public static void preInitMaterial(Material material, String name, boolean hasMolten) {
 		MaterialIntegration integration;
 		if (material.getFluid() != null)
@@ -74,10 +69,20 @@ public class ModTinkersHelper {
 	}
 
 	public static void addMetalCasting(ItemStack nugget, ItemStack ingot, ItemStack block, Fluid fluid) {
-		TinkerRegistry.registerTableCasting(nugget, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 1),
-				fluid, Material.VALUE_Nugget);
-		TinkerRegistry.registerTableCasting(ingot, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 0),
-				fluid, Material.VALUE_Ingot);
-		TinkerRegistry.registerBasinCasting(block, CAST_BLOCK, fluid, Material.VALUE_Block);
+		addNuggetCasting(nugget, fluid);
+		addIngotCasting(ingot, fluid);
+		addBlockCasting(block, fluid);
+	}
+
+	public static void addNuggetCasting(ItemStack nugget, Fluid fluid) {
+		TinkerRegistry.registerTableCasting(nugget, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 1), fluid, Material.VALUE_Nugget);
+	}
+
+	public static void addIngotCasting(ItemStack ingot, Fluid fluid) {
+		TinkerRegistry.registerTableCasting(ingot, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 0), fluid, Material.VALUE_Ingot);
+	}
+
+	public static void addBlockCasting(ItemStack block, Fluid fluid) {
+		TinkerRegistry.registerBasinCasting(block, ItemStack.EMPTY, fluid, Material.VALUE_Block);
 	}
 }

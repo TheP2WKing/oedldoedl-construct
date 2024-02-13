@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct;
+package net.thep2wking.oedldoedlconstruct.util;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,13 +17,14 @@ import slimeknights.tconstruct.library.modifiers.IModifier;
 
 public class ModTinkersBookTransformer extends BookTransformer {
 	@Override
+	@SideOnly(Side.CLIENT)
 	public void transform(BookData book) {
 		SectionData defaultSection = null, oedldoedlconstructSection = null;
 		for (SectionData section : book.sections) {
 			if (section.name.equals("modifiers")) {
 				defaultSection = section;
 			}
-			if (section.name.equals("oedldoedlconstructmodifiers")) {
+			if (section.name.equals(OedldoedlConstruct.MODID + "_modifiers")) {
 				oedldoedlconstructSection = section;
 			}
 		}
@@ -54,7 +55,7 @@ public class ModTinkersBookTransformer extends BookTransformer {
 
 	@SideOnly(Side.CLIENT)
 	public static void integrate() {
-		TinkerBook.INSTANCE.addRepository(new FileRepository(OedldoedlConstruct.PREFIX + "book"));
+		TinkerBook.INSTANCE.addRepository(new FileRepository(OedldoedlConstruct.MODID + ":book"));
 		TinkerBook.INSTANCE.addTransformer(new ModTinkersBookTransformer());
 	}
 }

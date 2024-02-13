@@ -4,6 +4,8 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 
 public class FluidOedldoedl extends Fluid {
@@ -44,6 +46,7 @@ public class FluidOedldoedl extends Fluid {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity() {
 		return rarity;
 	}

@@ -1,8 +1,7 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct;
+package net.thep2wking.oedldoedlconstruct.init;
 
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.api.ModTinkersHelper;
-import net.thep2wking.oedldoedlconstruct.init.ModModifier;
 import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.utils.HarvestLevels;

@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlconstruct.content.tconstruct.modifier;
+package net.thep2wking.oedldoedlconstruct.content.modifier;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
@@ -7,22 +7,13 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
-import net.thep2wking.oedldoedlconstruct.init.ModModifier;
-import slimeknights.tconstruct.library.modifiers.IToolMod;
 import slimeknights.tconstruct.library.modifiers.ModifierAspect;
 import slimeknights.tconstruct.library.modifiers.ModifierTrait;
 
-public class ModifierSadistic extends ModifierTrait {
-	public ModifierSadistic() {
-		super("sadistic", 0x49372c);
+public class ModifierLevitating extends ModifierTrait {
+	public ModifierLevitating() {
+		super("levitating", 0xa673a6);
 		this.addAspects(new ModifierAspect.SingleAspect(this));
-		this.addItem("sadisticSoul");
-	}
-
-	@Override
-	public boolean canApplyTogether(IToolMod otherModifier) {
-		return !otherModifier.getIdentifier().equals(ModModifier.HATER.getIdentifier())
-				&& !otherModifier.getIdentifier().equals(ModModifier.LEVITATING.getIdentifier());
 	}
 
 	@Override
@@ -41,13 +32,8 @@ public class ModifierSadistic extends ModifierTrait {
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt,
 			boolean wasCritical) {
 		World world = target.getEntityWorld();
-		if (target.isEntityAlive() && !world.isRemote) {
-			target.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 100, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 100, 0, false, false));
-			target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 60, 3, false, false));
-			if (player.isSneaking()) {
-				target.setPosition(target.posX, target.posY - 3, target.posZ);
-			}
+		if (target.isEntityAlive() && !world.isRemote && player.isSneaking()) {
+			target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, 60, 50, false, false));
 		}
 	}
 }
