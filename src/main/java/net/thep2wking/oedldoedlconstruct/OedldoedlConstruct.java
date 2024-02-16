@@ -58,9 +58,9 @@ public class OedldoedlConstruct {
 
         @Override
         @SideOnly(Side.CLIENT)
-        public void displayAllRelevantItems(NonNullList<ItemStack> itemList) {
-            super.displayAllRelevantItems(itemList);
-            ModFluidUtil.displayForgeBuckets(itemList, OedldoedlConstruct.MODID);
+        public void displayAllRelevantItems(NonNullList<ItemStack> list) {
+            super.displayAllRelevantItems(list);
+            ModFluidUtil.displayForgeBuckets(list, OedldoedlConstruct.MODID);
         }
     };
 
