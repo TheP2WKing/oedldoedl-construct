@@ -2,10 +2,10 @@
     {
         "modid": "oedldoedlconstruct",
         "name": "Oedldoedl Construct",
-        "description": "An addon or module or whatever you want to call it for the oedldoedl series. This mod adds tinkers tools and fluids to oedldoedl resources. Originally intended to be used with mods like CraftTweaker or KubeJS to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.",
+        "description": "A content module for the oedldoedl series that adds tinkers tools, modifier and liquids. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod does add its own recipes. Recipes can be disabled and some items easily configured via a config file.",
         "version": "${version}",
         "mcversion": "${mcversion}",
-        "url": "https://github.com/TheP2WKing/oedldoedl-construct",
+        "url": "https://github.com/thep2wking/oedldoedl-construct",
         "authorList": ["TheP2WKing"],
         "credits": "TheP2WKing",
         "logoFile": "assets/oedldoedlconstruct/textures/gui/logo/construct_logo.png",
