@@ -1,17 +1,11 @@
 package net.thep2wking.oedldoedlconstruct.util;
 
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.init.ModBlocks;
 import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 
 public class ModRenderer {
-	@SubscribeEvent
-	@SideOnly(Side.CLIENT)
-    public static void registerFluidModels(ModelRegistryEvent event) {
+	public static void registerFluidRenderer() {
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "base", ModBlocks.MOLTEN_BASE);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "oedldoedl", ModBlocks.MOLTEN_OEDLDOEDL);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "bedrockium", ModBlocks.MOLTEN_BEDROCKIUM);
@@ -30,5 +24,7 @@ public class ModRenderer {
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "nagatorium", ModBlocks.MOLTEN_NAGATORIUM);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "sakurajimarium", ModBlocks.MOLTEN_SAKURAJIMARIUM);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "kitagawarium", ModBlocks.MOLTEN_KITAGAWARIUM);
+
+		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "superheated_lava", ModBlocks.SUPERHEATED_LAVA);
     }
 }

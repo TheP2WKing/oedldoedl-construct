@@ -10,6 +10,7 @@ import net.thep2wking.oedldoedlconstruct.content.modifier.ModifierSadistic;
 import net.thep2wking.oedldoedlconstruct.content.modifier.ModifierSunburnt;
 import net.thep2wking.oedldoedlconstruct.content.modifier.ModifierTimeshifter;
 import net.thep2wking.oedldoedlconstruct.content.modifier.ModifierWorldBreaker;
+import net.thep2wking.oedldoedlcore.init.ModPotions;
 import net.thep2wking.oedldoedlresources.init.ModItems;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
@@ -31,5 +32,5 @@ public class ModModifier {
 	public static final AbstractTrait QUARTARIUSLY = new ModSingleModifierEffectBase("quartariusly", 0x0e5191, "quartariumStar", MobEffects.STRENGTH, ModItems.QUARTARIUM_SHARD);
 	public static final AbstractTrait NAGATORIUSLY = new ModSingleModifierEffectBase("nagatoriusly", 0x650fc1, "nagatoriumStar", MobEffects.UNLUCK, ModItems.NAGATORIUM_SHARD);
 	public static final AbstractTrait SAKURAJIMARIUSLY = new ModSingleModifierEffectBase("sakurajimariusly", 0x2a2929, "sakurajimariumStar", MobEffects.JUMP_BOOST, ModItems.SAKURAJIMARIUM_SHARD);
-	public static final AbstractTrait KITAGAWARIUSLY = new ModSingleModifierEffectBase("kitagawariusly", 0x97173e, "kitagawariumStar", MobEffects.WATER_BREATHING, ModItems.KITAGAWARIUM_SHARD);
+	public static final AbstractTrait KITAGAWARIUSLY = new ModSingleModifierEffectBase("kitagawariusly", 0x97173e, "kitagawariumStar", ModPotions.DOLPHIN_GRACE, ModItems.KITAGAWARIUM_SHARD);
 }

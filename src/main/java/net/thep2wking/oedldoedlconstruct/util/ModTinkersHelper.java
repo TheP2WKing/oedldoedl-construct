@@ -1,12 +1,9 @@
-package net.thep2wking.oedldoedlconstruct.api;
+package net.thep2wking.oedldoedlconstruct.util;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import slimeknights.tconstruct.library.MaterialIntegration;
@@ -57,38 +54,5 @@ public class ModTinkersHelper {
 	public static void initToolForge(RegistryEvent.Register<IRecipe> event, String ore) {
 		IForgeRegistry<IRecipe> registry = event.getRegistry();
 		TinkerTools.registerToolForgeBlock(registry, ore);
-	}
-
-	public static void addMetalMelting(String name, Fluid fluid) {
-		TinkerRegistry.registerMelting("nugget" + name.substring(0, 1).toUpperCase() + name.substring(1), fluid,
-				Material.VALUE_Nugget);
-		TinkerRegistry.registerMelting("ingot" + name.substring(0, 1).toUpperCase() + name.substring(1), fluid,
-				Material.VALUE_Ingot);
-		TinkerRegistry.registerMelting("dust" + name.substring(0, 1).toUpperCase() + name.substring(1), fluid,
-				Material.VALUE_Ingot);
-		TinkerRegistry.registerMelting("block" + name.substring(0, 1).toUpperCase() + name.substring(1), fluid,
-				Material.VALUE_Block);
-		TinkerRegistry.registerMelting("ore" + name.substring(0, 1).toUpperCase() + name.substring(1), fluid,
-				Material.VALUE_Ingot * 2);
-	}
-
-	public static void addNuggetCasting(ItemStack nugget, Fluid fluid) {
-		TinkerRegistry.registerTableCasting(nugget, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 1),
-				fluid, Material.VALUE_Nugget);
-	}
-
-	public static void addIngotCasting(ItemStack ingot, Fluid fluid) {
-		TinkerRegistry.registerTableCasting(ingot, new ItemStack(Item.getByNameOrId("tconstruct:cast_custom"), 1, 0),
-				fluid, Material.VALUE_Ingot);
-	}
-
-	public static void addBlockCasting(ItemStack block, Fluid fluid) {
-		TinkerRegistry.registerBasinCasting(block, ItemStack.EMPTY, fluid, Material.VALUE_Block);
-	}
-
-	public static void addMetalCasting(ItemStack nugget, ItemStack ingot, ItemStack block, Fluid fluid) {
-		addNuggetCasting(nugget, fluid);
-		addIngotCasting(ingot, fluid);
-		addBlockCasting(block, fluid);
 	}
 }

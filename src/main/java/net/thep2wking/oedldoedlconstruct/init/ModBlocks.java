@@ -6,7 +6,9 @@ import net.minecraft.init.MobEffects;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
 import net.thep2wking.oedldoedlconstruct.api.ModBlockFluidEffectBase;
+import net.thep2wking.oedldoedlconstruct.content.block.BlockFluidSuperheatedLava;
 import net.thep2wking.oedldoedlcore.api.fluid.ModBlockFluidBase;
+import net.thep2wking.oedldoedlcore.init.ModPotions;
 
 public class ModBlocks {
 	public static final BlockFluidClassic MOLTEN_BASE = new ModBlockFluidBase(OedldoedlConstruct.MODID, "base", ModFluids.MOLTEN_BASE, Material.LAVA, MapColor.IRON);
@@ -26,5 +28,7 @@ public class ModBlocks {
 	public static final BlockFluidClassic MOLTEN_QUARTARIUM = new ModBlockFluidEffectBase(OedldoedlConstruct.MODID, "quartarium", ModFluids.MOLTEN_QUARTARIUM, Material.LAVA, MapColor.BLUE, MobEffects.STRENGTH, false);
 	public static final BlockFluidClassic MOLTEN_NAGATORIUM = new ModBlockFluidEffectBase(OedldoedlConstruct.MODID, "nagatorium", ModFluids.MOLTEN_NAGATORIUM, Material.LAVA, MapColor.PURPLE, MobEffects.UNLUCK, true);
 	public static final BlockFluidClassic MOLTEN_SAKURAJIMARIUM = new ModBlockFluidEffectBase(OedldoedlConstruct.MODID, "sakurajimarium", ModFluids.MOLTEN_SAKURAJIMARIUM, Material.LAVA, MapColor.GRAY, MobEffects.JUMP_BOOST, false);
-	public static final BlockFluidClassic MOLTEN_KITAGAWARIUM = new ModBlockFluidEffectBase(OedldoedlConstruct.MODID, "kitagawarium", ModFluids.MOLTEN_KITAGAWARIUM, Material.LAVA, MapColor.PINK, MobEffects.WATER_BREATHING, false);
+	public static final BlockFluidClassic MOLTEN_KITAGAWARIUM = new ModBlockFluidEffectBase(OedldoedlConstruct.MODID, "kitagawarium", ModFluids.MOLTEN_KITAGAWARIUM, Material.LAVA, MapColor.PINK, ModPotions.DOLPHIN_GRACE, false);
+
+	public static final BlockFluidClassic SUPERHEATED_LAVA = new BlockFluidSuperheatedLava(OedldoedlConstruct.MODID, "superheated_lava", ModFluids.SUPERHEATED_LAVA, Material.LAVA, MapColor.ORANGE_STAINED_HARDENED_CLAY);
 }

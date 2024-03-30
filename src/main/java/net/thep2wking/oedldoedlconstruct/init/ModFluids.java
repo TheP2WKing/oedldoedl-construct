@@ -16,7 +16,7 @@ public class ModFluids {
 	public static final Fluid MOLTEN_SADISTIUM = new ModFluidBase(OedldoedlConstruct.MODID, "sadistium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x5b4538, 1000, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
 	public static final Fluid MOLTEN_DRUNKIUM = new ModFluidBase(OedldoedlConstruct.MODID, "drunkium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x5283ff, 1000, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
 	public static final Fluid MOLTEN_MONEY = new ModFluidBase(OedldoedlConstruct.MODID, "money", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x599453, 1000, 2000, 10000, 10, false, ModRarities.GREEN);
-	public static final Fluid MOLTEN_CHAOS = new ModFluidBase(OedldoedlConstruct.MODID, "chaos", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x0e0025, 1500, 2000, 10000, 10, false, ModRarities.BLACK);
+	public static final Fluid MOLTEN_CHAOS = new ModFluidBase(OedldoedlConstruct.MODID, "chaos", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x0e0025, 1600, 2000, 10000, 10, false, ModRarities.BLACK);
 
 	public static final Fluid MOLTEN_GREMORIUM = new ModFluidBase(OedldoedlConstruct.MODID, "gremorium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x990000, 1200, 2000, 10000, 10, false, ModRarities.DARK_RED);
 	public static final Fluid MOLTEN_HIMEJIMARIUM = new ModFluidBase(OedldoedlConstruct.MODID, "himejimarium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x232033, 1200, 2000, 10000, 10, false, ModRarities.DARK_BLUE);
@@ -26,4 +26,7 @@ public class ModFluids {
 	public static final Fluid MOLTEN_NAGATORIUM = new ModFluidBase(OedldoedlConstruct.MODID, "nagatorium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x650fc1, 1200, 2000, 10000, 10, false, ModRarities.DARK_PURPLE);
 	public static final Fluid MOLTEN_SAKURAJIMARIUM = new ModFluidBase(OedldoedlConstruct.MODID, "sakurajimarium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x2a2929, 1200, 2000, 10000, 10, false, ModRarities.DARK_GRAY);
 	public static final Fluid MOLTEN_KITAGAWARIUM = new ModFluidBase(OedldoedlConstruct.MODID, "kitagawarium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x97173e, 1200, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
+
+	public static final Fluid SUPERHEATED_LAVA = new ModFluidBase(OedldoedlConstruct.MODID, "superheated_lava", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0xf7430c, 3000, 2000, 1000, 10, false, ModRarities.RED);
+
 }

@@ -9,12 +9,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
-import net.thep2wking.oedldoedlconstruct.api.ModTinkersHelper;
 import net.thep2wking.oedldoedlconstruct.config.ConstructConfig;
 import net.thep2wking.oedldoedlconstruct.init.ModBlocks;
 import net.thep2wking.oedldoedlconstruct.init.ModFluids;
 import net.thep2wking.oedldoedlconstruct.init.ModItems;
 import net.thep2wking.oedldoedlconstruct.util.ModRenderer;
+import net.thep2wking.oedldoedlconstruct.util.ModTinkersHelper;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 
@@ -23,7 +23,7 @@ public class ModRegistry {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event) {
 		ModRegistryHelper.registerModels(event, OedldoedlConstruct.MODID);
-		ModRenderer.registerFluidModels(event);
+		ModRenderer.registerFluidRenderer();
 	}
 
 	@SubscribeEvent
@@ -48,6 +48,8 @@ public class ModRegistry {
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_NAGATORIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_SAKURAJIMARIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_KITAGAWARIUM);
+
+		ModRegistryHelper.registerBlock(event, ModBlocks.SUPERHEATED_LAVA);
 	}
 
 	@SubscribeEvent
@@ -82,6 +84,8 @@ public class ModRegistry {
 			ModTinkersHelper.initToolForge(event, "blockNagatorium");
 			ModTinkersHelper.initToolForge(event, "blockSakurajimarium");
 			ModTinkersHelper.initToolForge(event, "blockKitagawarium");
+
+			ModTinkersHelper.initToolForge(event, "chaosPlank");
 		}
 	}
 
@@ -106,5 +110,7 @@ public class ModRegistry {
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_NAGATORIUM);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_SAKURAJIMARIUM);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_KITAGAWARIUM);
+
+		ModRegistryHelper.registerFluid(ModFluids.SUPERHEATED_LAVA);
 	}
 }
