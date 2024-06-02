@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.1.0] - 2024-06-02
+
+### Added
+
+- added superheated lava that breaks everything underneath
+- added sunburnt modifier for Kitagawarium tools
+- added more config options for custom tinkers modifier
+- added superheated lava as smeltery fuel
+
+### Changed
+
+- Kitagawarium now uses dolphin grace effect instead of water breathing
+- adjusted molten chaos temperature
+- moved tinkers utilities out of API package
+- updated sadistic soul texture to match 1.12 style
+
 ## [4.0.0] - 2024-03-03
 
 ### 1.12.2 isn't dead, it just took some time
