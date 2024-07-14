@@ -13,11 +13,11 @@ import net.thep2wking.oedldoedlcore.init.ModPotions;
 public class ModBlocks {
 	public static final BlockFluidClassic MOLTEN_BASE = new ModBlockFluidBase(OedldoedlConstruct.MODID, "base", ModFluids.MOLTEN_BASE, Material.LAVA, MapColor.IRON);
 	public static final BlockFluidClassic MOLTEN_OEDLDOEDL = new ModBlockFluidBase(OedldoedlConstruct.MODID, "oedldoedl", ModFluids.MOLTEN_OEDLDOEDL, Material.LAVA, MapColor.YELLOW);
-	public static final BlockFluidClassic MOLTEN_BEDROCKIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "bedrockium", ModFluids.MOLTEN_BEDROCKIUM, Material.LAVA, MapColor.BLACK);
-	public static final BlockFluidClassic MOLTEN_CLOUDIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "cloudium", ModFluids.MOLTEN_CLOUDIUM, Material.LAVA, MapColor.SNOW);
-	public static final BlockFluidClassic MOLTEN_ELEVATIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "elevatium", ModFluids.MOLTEN_ELEVATIUM, Material.LAVA, MapColor.PURPLE);
-	public static final BlockFluidClassic MOLTEN_SADISTIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "sadistium", ModFluids.MOLTEN_SADISTIUM, Material.LAVA, MapColor.BROWN);
-	public static final BlockFluidClassic MOLTEN_DRUNKIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "drunkium", ModFluids.MOLTEN_DRUNKIUM, Material.LAVA, MapColor.CYAN);
+	public static final BlockFluidClassic MOLTEN_BEDROCKIUM = new BlockFluidBedrockium(OedldoedlConstruct.MODID, "bedrockium", ModFluids.MOLTEN_BEDROCKIUM, Material.LAVA, MapColor.BLACK, MobEffects.SLOWNESS, MobEffects.HUNGER, true);
+	public static final BlockFluidClassic MOLTEN_CLOUDIUM = new BlockFluidCloudium(OedldoedlConstruct.MODID, "cloudium", ModFluids.MOLTEN_CLOUDIUM, Material.LAVA, MapColor.SNOW, ModPotions.SLOW_FALLING, false);
+	public static final BlockFluidClassic MOLTEN_ELEVATIUM = new BlockFluidElevatium(OedldoedlConstruct.MODID, "elevatium", ModFluids.MOLTEN_ELEVATIUM, Material.LAVA, MapColor.PURPLE, MobEffects.LEVITATION, true);
+	public static final BlockFluidClassic MOLTEN_SADISTIUM = new BlockFluidSadistium(OedldoedlConstruct.MODID, "sadistium", ModFluids.MOLTEN_SADISTIUM, Material.LAVA, MapColor.BROWN, MobEffects.MINING_FATIGUE, MobEffects.WEAKNESS, MobEffects.GLOWING, true);
+	public static final BlockFluidClassic MOLTEN_DRUNKIUM = new BlockFluidDrunkium(OedldoedlConstruct.MODID, "drunkium", ModFluids.MOLTEN_DRUNKIUM, Material.LAVA, MapColor.CYAN, MobEffects.BLINDNESS, MobEffects.SLOWNESS, MobEffects.NAUSEA, MobEffects.WITHER, true);
 	public static final BlockFluidClassic MOLTEN_MONEY = new ModBlockFluidBase(OedldoedlConstruct.MODID, "money", ModFluids.MOLTEN_MONEY, Material.LAVA, MapColor.GREEN_STAINED_HARDENED_CLAY);
 	public static final BlockFluidClassic MOLTEN_CHAOS = new ModBlockFluidBase(OedldoedlConstruct.MODID, "chaos", ModFluids.MOLTEN_CHAOS, Material.LAVA, MapColor.BLACK);
 
