@@ -48,7 +48,7 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "remote_breaker",
 					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.REMOTE_BREAKER, 1, 0), "ABA", "CDE",
 					"FFF", 'A', "dyeOrange", 'B', "torchRedstone", 'C', "dyeRed", 'D',
-					new ItemStack(Items.DIAMOND_PICKAXE, 1, 0), 'E', "dyeGreen", 'F', "obsidian");
+					new ItemStack(Items.DIAMOND_PICKAXE, 1, 0), 'E', "dyeGreen", 'F', "ingotBedrockium");
 			ModRecipeHelper.addShapedRecipe(OedldoedlConstruct.MODID, "sadistic_soul",
 					new ItemStack(net.thep2wking.oedldoedlconstruct.init.ModItems.SADISTIC_SOUL, 1, 0), "ABA", "BCB",
 					"ABA", 'A', "ingotSadistium", 'B', "soulsand", 'C', new ItemStack(Items.SKULL, 1, 1));
