@@ -2,7 +2,7 @@
 itemGroup.oedldoedlconstruct.name=§dOedldoedl Construct
 
 # icons
-item.oedldoedlcore.construct_icon.annotation3=Version: §e1.12.2-4.1.0
+item.oedldoedlcore.construct_icon.annotation3=Version: §e1.12.2-4.2.0
 
 # damage sources
 death.attack.oedldoedlconstruct.superheated_lava=%1$s melted

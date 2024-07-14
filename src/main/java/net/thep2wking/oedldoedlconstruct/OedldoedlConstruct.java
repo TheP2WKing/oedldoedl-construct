@@ -2,8 +2,6 @@ package net.thep2wking.oedldoedlconstruct;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -19,11 +17,10 @@ import net.thep2wking.oedldoedlconstruct.init.ModTinkersTools;
 import net.thep2wking.oedldoedlconstruct.registry.ModRecipes;
 import net.thep2wking.oedldoedlconstruct.registry.ModRegistry;
 import net.thep2wking.oedldoedlconstruct.util.proxy.CommonProxy;
+import net.thep2wking.oedldoedlcore.api.tab.ModOedldoedlTabBase;
 import net.thep2wking.oedldoedlcore.init.ModItems;
-import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogInUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
-import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 @Mod(modid = OedldoedlConstruct.MODID, name = OedldoedlConstruct.NAME, version = OedldoedlConstruct.VERSION, dependencies = OedldoedlConstruct.DEPENDENCIES)
 public class OedldoedlConstruct {
@@ -31,8 +28,8 @@ public class OedldoedlConstruct {
     public static final String PREFIX = MODID + ":";
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Construct";
-    public static final String VERSION = MC_VERSION + "-" + "4.1.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-4.1.0,);required-after:oedldoedlresources@[1.12.2-4.1.0,);required-after:mantle@[1.12-1.3.3.55,);required-after:tconstruct@[1.12.2-2.13.0.180,);";
+    public static final String VERSION = MC_VERSION + "-" + "4.2.0";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);required-after:oedldoedlcore@[1.12.2-4.2.0,);required-after:oedldoedlresources@[1.12.2-4.2.0,);required-after:mantle@[1.12-1.3.3.55,);required-after:tconstruct@[1.12.2-2.13.0.180,);";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlconstruct.util.proxy.ServerProxy";
 
@@ -42,25 +39,12 @@ public class OedldoedlConstruct {
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
     public static CommonProxy PROXY;
 
-    public static final CreativeTabs TAB = new CreativeTabs(OedldoedlConstruct.MODID + ".name") {
+    public static final CreativeTabs TAB = new ModOedldoedlTabBase(MODID) {
         @Override
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem() {
-            return new ItemStack(ModItems.CONSTRUCT_ICON, 1, 0);
-        }
-
-        @Override
-        @SideOnly(Side.CLIENT)
-        public ResourceLocation getBackgroundImage() {
-            return ModReferences.CREATIVE_TAB_DARK;
-        }
-
-        @Override
-        @SideOnly(Side.CLIENT)
-        public void displayAllRelevantItems(NonNullList<ItemStack> list) {
-            super.displayAllRelevantItems(list);
-            ModFluidUtil.displayForgeBuckets(list, OedldoedlConstruct.MODID);
-        }
+            return new ItemStack(ModItems.CONSTRUCT_ICON);
+        };
     };
 
     @Mod.EventHandler
