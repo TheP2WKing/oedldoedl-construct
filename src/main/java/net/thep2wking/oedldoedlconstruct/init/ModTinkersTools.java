@@ -18,6 +18,8 @@ public class ModTinkersTools {
 	public static Material MONEY;
 	public static Material CHAOS;
 
+	public static Material AGARIC;
+
 	public static Material GREMORIUM;
 	public static Material HIMEJIMARIUM;
 	public static Material TOUJOURIUM;
@@ -92,6 +94,13 @@ public class ModTinkersTools {
 		CHAOS.addTrait(ModModifier.HATER, MaterialTypes.EXTRA);
 		ModTinkersHelper.preInitMaterial(CHAOS, "chaos", true);
 		ModTinkersHelper.addMaterialStats(CHAOS, 99999, 99.9f, 99.9f, 2.0f, HarvestLevels.COBALT + 6);
+		ModTinkersHelper.addSpecialMaterialStats(CHAOS, 2.0f, HarvestLevels.COBALT + 6, 2.0f);
+
+		AGARIC = new Material(OedldoedlConstruct.MODID + "." + "agaric", 0xe1aebe);
+		AGARIC.addTrait(TinkerTraits.baconlicious);
+		AGARIC.addTrait(TinkerTraits.tasty);
+		ModTinkersHelper.preInitMaterial(AGARIC, "agaric", false);
+		ModTinkersHelper.addSpecialMaterialStats(AGARIC, 1.2f, 3, 1.0f);
 
 		GREMORIUM = new Material(OedldoedlConstruct.MODID + "." + "gremorium", 0x990000);
 		GREMORIUM.addTrait(TinkerTraits.autosmelt);
@@ -168,6 +177,8 @@ public class ModTinkersTools {
 		ModTinkersHelper.initMaterial(DRUNKIUM, "drunkium", "drunkium", "ingotDrunkium", true);
 		ModTinkersHelper.initMaterial(MONEY, "money", "money", "ingotMoney", true);
 		ModTinkersHelper.initMaterial(CHAOS, "chaos", "chaos", "ingotChaos", true);
+		
+		ModTinkersHelper.initMaterial(AGARIC, null, "flowerBaconAgaric", "flowerBaconAgaric", false);
 
 		ModTinkersHelper.initMaterial(GREMORIUM, "gremorium", "gremorium", "ingotGremorium", true);
 		ModTinkersHelper.initMaterial(HIMEJIMARIUM, "himejimarium", "himejimarium", "ingotHimejimarium", true);
