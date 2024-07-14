@@ -59,6 +59,7 @@ public class ModRecipes {
 
 			ModConstructRecipeHelper.addMetalMelting("base", ModFluids.MOLTEN_BASE);
 			ModConstructRecipeHelper.addMetalMelting("oedldoedl", ModFluids.MOLTEN_OEDLDOEDL);
+			ModConstructRecipeHelper.addMetalMelting("caterium", ModFluids.MOLTEN_CATERIUM);
 			ModConstructRecipeHelper.addMetalMelting("bedrockium", ModFluids.MOLTEN_BEDROCKIUM);
 			ModConstructRecipeHelper.addMetalMelting("cloudium", ModFluids.MOLTEN_CLOUDIUM);
 			ModConstructRecipeHelper.addMetalMelting("elevatium", ModFluids.MOLTEN_ELEVATIUM);
@@ -75,7 +76,7 @@ public class ModRecipes {
 			ModConstructRecipeHelper.addMetalMelting("nagatorium", ModFluids.MOLTEN_NAGATORIUM);
 			ModConstructRecipeHelper.addMetalMelting("sakurajimarium", ModFluids.MOLTEN_SAKURAJIMARIUM);
 			ModConstructRecipeHelper.addMetalMelting("kitagawarium", ModFluids.MOLTEN_KITAGAWARIUM);
-
+			
 			ModConstructRecipeHelper.addCustomMelting("nuggetObsidian", TinkerFluids.obsidian, 32);
 			ModConstructRecipeHelper.addCustomtCasting(new ItemStack(ModItems.OBSIDIAN_NUGGET, 1, 0),
 					"tconstruct:cast_custom", 1, TinkerFluids.obsidian, 32);
@@ -88,6 +89,9 @@ public class ModRecipes {
 			ModConstructRecipeHelper.addMetalCasting(new ItemStack(ModItems.OEDLDOEDL_NUGGET, 1, 0),
 					new ItemStack(ModItems.OEDLDOEDL_INGOT, 1, 0), new ItemStack(ModBlocks.OEDLDOEDL, 1, 0),
 					ModFluids.MOLTEN_OEDLDOEDL);
+			ModConstructRecipeHelper.addMetalCasting(new ItemStack(ModItems.CATERIUM_NUGGET, 1, 0),
+					new ItemStack(ModItems.CATERIUM_INGOT, 1, 0), new ItemStack(ModBlocks.CATERIUM, 1, 0),
+					ModFluids.MOLTEN_CATERIUM);
 			ModConstructRecipeHelper.addMetalCasting(new ItemStack(ModItems.BEDROCKIUM_NUGGET, 1, 0),
 					new ItemStack(ModItems.BEDROCKIUM_INGOT, 1, 0), new ItemStack(ModBlocks.BEDROCKIUM, 1, 0),
 					ModFluids.MOLTEN_BEDROCKIUM);

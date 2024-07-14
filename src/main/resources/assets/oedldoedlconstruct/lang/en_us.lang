@@ -23,6 +23,8 @@ tile.oedldoedlconstruct.base.name=Molten Base
 fluid.oedldoedlconstruct.base=Molten Base
 tile.oedldoedlconstruct.oedldoedl.name=Molten Oedldoedl
 fluid.oedldoedlconstruct.oedldoedl=Molten Oedldoedl
+tile.oedldoedlconstruct.caterium.name=Molten Caterium
+fluid.oedldoedlconstruct.caterium=Molten Caterium
 tile.oedldoedlconstruct.bedrockium.name=Molten Bedrockium
 fluid.oedldoedlconstruct.bedrockium=Molten Bedrockium
 tile.oedldoedlconstruct.cloudium.name=Molten Cloudium
@@ -60,6 +62,7 @@ fluid.oedldoedlconstruct.superheated_lava=Superheated Lava
 
 # material
 material.oedldoedlconstruct.base.name=Base
+material.oedldoedlconstruct.caterium.name=Caterium
 material.oedldoedlconstruct.bedrockium.name=Bedrockium
 material.oedldoedlconstruct.cloudium.name=Cloudium
 material.oedldoedlconstruct.elevatium.name=Elevatium
@@ -67,6 +70,8 @@ material.oedldoedlconstruct.sadistium.name=Sadistium
 material.oedldoedlconstruct.drunkium.name=Drunkium
 material.oedldoedlconstruct.money.name=Money
 material.oedldoedlconstruct.chaos.name=Chaos
+
+material.oedldoedlconstruct.agaric.name=Agaric
 
 material.oedldoedlconstruct.gremorium.name=Gremorium
 material.oedldoedlconstruct.himejimarium.name=Himejimarium
@@ -101,7 +106,6 @@ modifier.oedldoedlconstruct.sadistic.name=Sadistic
 modifier.oedldoedlconstruct.sadistic.desc=§oSurprise, surprise...§r\n§fMobs and players will hate you!
 modifier.oedldoedlconstruct.levitating.name=Levitating
 modifier.oedldoedlconstruct.levitating.desc=§oHigh Hopes but where is Panic At The Disco?§r\n§fCU again...
-
 modifier.oedldoedlconstruct.timeshifter.name=Timeshifter
 modifier.oedldoedlconstruct.timeshifter.desc=§o3 a.m. again?!§r\n§fI do not wanna go to bed.
 modifier.oedldoedlconstruct.sunburnt.name=Sunburnt

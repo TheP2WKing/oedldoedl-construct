@@ -8,6 +8,7 @@ public class ModRenderer {
 	public static void registerFluidRenderer() {
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "base", ModBlocks.MOLTEN_BASE);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "oedldoedl", ModBlocks.MOLTEN_OEDLDOEDL);
+		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "caterium", ModBlocks.MOLTEN_CATERIUM);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "bedrockium", ModBlocks.MOLTEN_BEDROCKIUM);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "cloudium", ModBlocks.MOLTEN_CLOUDIUM);
 		ModFluidUtil.addRenderForFluid(OedldoedlConstruct.MODID, "elevatium", ModBlocks.MOLTEN_ELEVATIUM);

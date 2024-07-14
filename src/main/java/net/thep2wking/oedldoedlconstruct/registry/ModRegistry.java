@@ -32,6 +32,7 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_BASE);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_OEDLDOEDL);
+		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_CATERIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_BEDROCKIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_CLOUDIUM);
 		ModRegistryHelper.registerBlock(event, ModBlocks.MOLTEN_ELEVATIUM);
@@ -69,6 +70,7 @@ public class ModRegistry {
 		if (ConstructConfig.CONTENT.CUSTOM_TOOL_FORGES) {
 			ModTinkersHelper.initToolForge(event, "blockBase");
 			ModTinkersHelper.initToolForge(event, "blockOedldoedl");
+			ModTinkersHelper.initToolForge(event, "blockCaterium");
 			ModTinkersHelper.initToolForge(event, "blockBedrockium");
 			ModTinkersHelper.initToolForge(event, "blockCloudium");
 			ModTinkersHelper.initToolForge(event, "blockElevatium");
@@ -94,6 +96,7 @@ public class ModRegistry {
 
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_BASE);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_OEDLDOEDL);
+		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_CATERIUM);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_BEDROCKIUM);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_CLOUDIUM);
 		ModRegistryHelper.registerFluid(ModFluids.MOLTEN_ELEVATIUM);

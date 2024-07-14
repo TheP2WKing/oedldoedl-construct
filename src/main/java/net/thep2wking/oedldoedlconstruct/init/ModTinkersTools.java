@@ -9,6 +9,7 @@ import slimeknights.tconstruct.tools.TinkerTraits;
 
 public class ModTinkersTools {
 	public static Material BASE;
+	public static Material CATERIUM;
 	public static Material BEDROCKIUM;
 	public static Material CLOUDIUM;
 	public static Material ELEVATIUM;
@@ -33,6 +34,13 @@ public class ModTinkersTools {
 		BASE.addTrait(TinkerTraits.magnetic, MaterialTypes.EXTRA);
 		ModTinkersHelper.preInitMaterial(BASE, "base", true);
 		ModTinkersHelper.addMaterialStats(BASE, 320, 5.1f, 7.2f, 0.5f, HarvestLevels.DIAMOND);
+
+		CATERIUM = new Material(OedldoedlConstruct.MODID + "." + "caterium", 0xc0b087);
+		CATERIUM.addTrait(TinkerTraits.established);
+		CATERIUM.addTrait(TinkerTraits.established, MaterialTypes.HANDLE);
+		CATERIUM.addTrait(TinkerTraits.established, MaterialTypes.EXTRA);
+		ModTinkersHelper.preInitMaterial(CATERIUM, "caterium", true);
+		ModTinkersHelper.addMaterialStats(CATERIUM, 540, 6.2f, 8.3f, 0.4f, HarvestLevels.OBSIDIAN);
 
 		BEDROCKIUM = new Material(OedldoedlConstruct.MODID + "." + "bedrockium", 0x575757);
 		BEDROCKIUM.addTrait(TinkerTraits.heavy);
@@ -152,6 +160,7 @@ public class ModTinkersTools {
 
 	public static void init() {
 		ModTinkersHelper.initMaterial(BASE, "base", "base", "ingotBase", true);
+		ModTinkersHelper.initMaterial(CATERIUM, "caterium", "caterium", "ingotCaterium", true);
 		ModTinkersHelper.initMaterial(BEDROCKIUM, "bedrockium", "bedrockium", "ingotBedrockium", true);
 		ModTinkersHelper.initMaterial(CLOUDIUM, "cloudium", "cloudium", "ingotCloudium", true);
 		ModTinkersHelper.initMaterial(ELEVATIUM, "elevatium", "elevatium", "ingotElevatium", true);
