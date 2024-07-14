@@ -45,7 +45,6 @@ public class ModBlockFluidEffectBase extends ModBlockFluidBase implements ITOPIn
 
 	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-		super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
 		if (entityIn instanceof EntityLivingBase && ConstructConfig.PROPERTIES.EFFECTS.FLUIDS.FLUID_EFFECTS
 				&& ConstructConfig.PROPERTIES.EFFECTS.EFFECTS_EBALED) {
 			((EntityLivingBase) entityIn).addPotionEffect(
