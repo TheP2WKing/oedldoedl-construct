@@ -17,7 +17,7 @@ import net.thep2wking.oedldoedlcore.init.ModPotions;
 
 public class ModBlocks {
 	public static final BlockFluidClassic MOLTEN_BASE = new ModBlockFluidBase(OedldoedlConstruct.MODID, "base", ModFluids.MOLTEN_BASE, Material.LAVA, MapColor.IRON);
-	public static final BlockFluidClassic MOLTEN_OEDLDOEDL = new ModBlockFluidBase(OedldoedlConstruct.MODID, "oedldoedl", ModFluids.MOLTEN_OEDLDOEDL, Material.LAVA, MapColor.YELLOW);
+	public static final BlockFluidClassic MOLTEN_OEDLDOEDL = new ModBlockFluidBase(OedldoedlConstruct.MODID, "oedldoedl", ModFluids.MOLTEN_OEDLDOEDL, 0xbf40bf, Material.LAVA, MapColor.YELLOW);
 	public static final BlockFluidClassic MOLTEN_CATERIUM = new ModBlockFluidBase(OedldoedlConstruct.MODID, "caterium", ModFluids.MOLTEN_CATERIUM, Material.LAVA, MapColor.YELLOW);
 	public static final BlockFluidClassic MOLTEN_BEDROCKIUM = new BlockFluidBedrockium(OedldoedlConstruct.MODID, "bedrockium", ModFluids.MOLTEN_BEDROCKIUM, Material.LAVA, MapColor.BLACK, MobEffects.SLOWNESS, MobEffects.HUNGER, true);
 	public static final BlockFluidClassic MOLTEN_CLOUDIUM = new BlockFluidCloudium(OedldoedlConstruct.MODID, "cloudium", ModFluids.MOLTEN_CLOUDIUM, Material.LAVA, MapColor.SNOW, ModPotions.SLOW_FALLING, false);
