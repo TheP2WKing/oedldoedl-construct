@@ -4,6 +4,9 @@ itemGroup.oedldoedlconstruct.name=§dOedldoedl Construct
 # icons
 item.oedldoedlcore.construct_icon.annotation3=Version: §e1.12.2-4.2.0
 
+# join message
+join.oedldoedlconstruct.message=Modify even more, then do it again!
+
 # damage sources
 death.attack.oedldoedlconstruct.superheated_lava=%1$s melted
 death.attack.oedldoedlconstruct.superheated_lava.player=%1$s melted whilst trying to escape %2$s
