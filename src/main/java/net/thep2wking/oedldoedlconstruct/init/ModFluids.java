@@ -2,14 +2,13 @@ package net.thep2wking.oedldoedlconstruct.init;
 
 import net.minecraftforge.fluids.Fluid;
 import net.thep2wking.oedldoedlconstruct.OedldoedlConstruct;
-import net.thep2wking.oedldoedlconstruct.content.fluid.FluidOedldoedl;
 import net.thep2wking.oedldoedlcore.api.fluid.ModFluidBase;
 import net.thep2wking.oedldoedlcore.util.ModFluidUtil;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 
 public class ModFluids {
 	public static final Fluid MOLTEN_BASE = new ModFluidBase(OedldoedlConstruct.MODID, "base", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x9d9d9d, 800, 2000, 10000, 10, false, ModRarities.WHITE);
-	public static final Fluid MOLTEN_OEDLDOEDL = new FluidOedldoedl(OedldoedlConstruct.MODID, "oedldoedl", FluidOedldoedl.OEDLDOEDL_STILL, FluidOedldoedl.OEDLDOEDL_FLOW, 1200, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
+	public static final Fluid MOLTEN_OEDLDOEDL = new ModFluidBase(OedldoedlConstruct.MODID, "oedldoedl", ModFluidUtil.addStillTexture(OedldoedlConstruct.MODID, "oedldoedl"), ModFluidUtil.addFlowTexture(OedldoedlConstruct.MODID, "oedldoedl"), 1200, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
 	public static final Fluid MOLTEN_CATERIUM = new ModFluidBase(OedldoedlConstruct.MODID, "caterium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0xc0b087, 900, 2000, 10000, 10, false, ModRarities.YELLOW);
 	public static final Fluid MOLTEN_BEDROCKIUM = new ModFluidBase(OedldoedlConstruct.MODID, "bedrockium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x575757, 1000, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
 	public static final Fluid MOLTEN_CLOUDIUM = new ModFluidBase(OedldoedlConstruct.MODID, "cloudium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0xf2f2f2, 1000, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
@@ -29,5 +28,4 @@ public class ModFluids {
 	public static final Fluid MOLTEN_KITAGAWARIUM = new ModFluidBase(OedldoedlConstruct.MODID, "kitagawarium", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0x97173e, 1200, 2000, 10000, 10, false, ModRarities.LIGHT_PURPLE);
 
 	public static final Fluid SUPERHEATED_LAVA = new ModFluidBase(OedldoedlConstruct.MODID, "superheated_lava", ModFluidUtil.MOLTEN_STILL_BASE, ModFluidUtil.MOLTEN_FLOW_BASE, 0xf7430c, 3000, 2000, 1000, 10, false, ModRarities.RED);
-
 }
