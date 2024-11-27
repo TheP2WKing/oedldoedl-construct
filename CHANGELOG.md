@@ -1,5 +1,26 @@
 # Changelog
 
+## [4.2.0] - 2024-11-27
+
+### Added
+
+- added tinkers parts and tools for arrows, fletching anf bow strings
+- added missing fluid effects to bedrockium, drunkium, cloudium, elevatium and sadistium
+- added molten caterium
+- added caterium tinkers tools
+- added bacon agaric tinker materials (primarily for fletching)
+
+### Changed
+
+- updated creative tab implementation
+- updated tinkers helper to accommodate for materials that do not have fluids associated
+- remove breaker now needs bedrockium instead of obsidian
+- clean up for molten oedldoedl code
+
+### Fixed
+
+- fixed fog color for molten oedldoedl
+
 ## [4.1.0] - 2024-06-09
 
 ### Added
